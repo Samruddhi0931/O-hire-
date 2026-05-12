@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../api";
-import { Plus, BookOpen, CheckCircle, Brain, Trash2 } from "lucide-react";
+import { Plus, BookOpen } from "lucide-react";
 
 interface Topic {
     id: number;

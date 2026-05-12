@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../api";
-import { Brain, Plus, Sparkles, RotateCcw, ChevronDown, ChevronUp } from "lucide-react";
+import { Brain, Sparkles, RotateCcw, ChevronDown } from "lucide-react";
 
 interface Flashcard {
   id: number;
@@ -119,9 +119,8 @@ export default function Flashcards() {
             <button
               key={m.id}
               onClick={() => setMode(m.id as any)}
-              className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${
-                mode === m.id ? "bg-blue-600 text-white" : "text-gray-400 hover:text-white"
-              }`}
+              className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${mode === m.id ? "bg-blue-600 text-white" : "text-gray-400 hover:text-white"
+                }`}
             >
               {m.label}
             </button>

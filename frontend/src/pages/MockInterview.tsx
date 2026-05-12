@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { api } from "../api";
-import { Play, Clock, Send, ChevronRight, RotateCcw, CheckCircle, XCircle, AlertCircle } from "lucide-react";
+import { Play, Send, ChevronRight, RotateCcw, CheckCircle, XCircle, AlertCircle } from "lucide-react";
 
 interface Question {
     id: number;

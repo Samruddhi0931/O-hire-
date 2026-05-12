@@ -19,7 +19,7 @@ const DIFFICULTY_CONFIG: Record<string, { color: string; bg: string }> = {
     hard: { color: "text-red-400", bg: "bg-red-900/30 border-red-800" },
 };
 
-const STATUS_ICONS: Record<string, JSX.Element> = {
+const STATUS_ICONS: Record<string, any> = {
     solved: <CheckCircle size={16} className="text-green-400" />,
     attempted: <Clock size={16} className="text-yellow-400" />,
     unsolved: <Circle size={16} className="text-gray-600" />,
