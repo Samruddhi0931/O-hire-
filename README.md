@@ -1,6 +1,6 @@
-# PrepOS — Developer Interview Prep Platform
+# O(hire) — Developer Interview Prep Platform
 
-A full-stack web application that solves the real problem of fragmented interview preparation. PrepOS combines spaced repetition flashcards, DSA topic tracking, company-wise question filtering, and AI-powered card generation into a single personal prep OS.
+A full-stack web application that solves the real problem of fragmented interview preparation. O(hire) combines spaced repetition flashcards, DSA topic tracking, company-wise question filtering, and AI-powered card generation into a single personal prep OS.
 
 ## The Problem
 
@@ -28,7 +28,7 @@ PostgreSQL    Redis
 ## Key Engineering Decisions
 
 ### SM-2 Spaced Repetition Algorithm
-Instead of showing cards randomly, PrepOS implements the SM-2 algorithm used in Anki. Each card review updates three parameters:
+Instead of showing cards randomly, O(hire) implements the SM-2 algorithm used in Anki. Each card review updates three parameters:
 - **Ease factor** — how hard this card is for the user (min 1.3)
 - **Interval** — days until next review
 - **Repetitions** — streak of successful recalls
@@ -70,8 +70,8 @@ The dashboard query aggregates `AVG(ease_factor)` per topic to surface the 5 top
 
 ```bash
 # Clone and install
-git clone https://github.com/yourusername/prepos
-cd prepos/backend && npm install
+git clone https://github.com/yourusername/O(hire)
+cd O(hire)/backend && npm install
 cd ../frontend && npm install
 
 # Configure environment
@@ -109,10 +109,3 @@ Key design decisions:
 - `flashcards` table stores SM-2 state (ease_factor, interval, repetitions, next_review) per card
 - `questions.companies` is a PostgreSQL TEXT[] with a GIN index for efficient array membership queries (`$1 = ANY(companies)`)
 - `user_question_progress` uses an upsert pattern to handle re-attempts cleanly
-
-## Resume Bullets (for reference)
-
-- Built a spaced repetition flashcard engine implementing the SM-2 algorithm, dynamically scheduling reviews based on per-card ease factor and recall quality — reduced redundant review time by surfacing only due cards
-- Engineered a company-wise DSA and system design question bank with Redis caching (1hr TTL, compound cache keys) — eliminated repeated DB queries for common filter combinations
-- Integrated OpenAI GPT-3.5-turbo with JSON mode to auto-generate flashcards from raw study notes — reduced manual card creation from minutes to seconds per topic
-- Designed a weak spot detection system aggregating average SM-2 ease factors per topic — surfaces the 5 highest-struggle areas to guide daily study focus
