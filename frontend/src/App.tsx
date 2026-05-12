@@ -30,7 +30,7 @@ export default function App() {
     <div className="min-h-screen bg-gray-950 text-white">
       <nav className="bg-gray-900 border-b border-gray-800 px-6 py-4 flex justify-between items-center sticky top-0 z-10">
         <h1 className="text-xl font-bold">
-          Prep<span className="text-blue-500">OS</span>
+          O(<span className="text-blue-500">(hire)</span>)
         </h1>
         <div className="flex items-center gap-6">
           {[
