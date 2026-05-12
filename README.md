@@ -1,6 +1,6 @@
-# PrepOS — Developer Interview Prep Platform
+# O(hire) — Developer Interview Prep Platform
 
-A full-stack web application that solves the real problem of fragmented interview preparation. PrepOS combines spaced repetition flashcards, DSA topic tracking, company-wise question filtering, and AI-powered card generation into a single personal prep OS.
+A full-stack web application that solves the real problem of fragmented interview preparation. O(hire) combines spaced repetition flashcards, DSA topic tracking, company-wise question filtering, and AI-powered card generation into a single personal prep OS.
 
 ## The Problem
 
@@ -28,7 +28,7 @@ PostgreSQL    Redis
 ## Key Engineering Decisions
 
 ### SM-2 Spaced Repetition Algorithm
-Instead of showing cards randomly, PrepOS implements the SM-2 algorithm used in Anki. Each card review updates three parameters:
+Instead of showing cards randomly, O(hire) implements the SM-2 algorithm used in Anki. Each card review updates three parameters:
 - **Ease factor** — how hard this card is for the user (min 1.3)
 - **Interval** — days until next review
 - **Repetitions** — streak of successful recalls
@@ -70,8 +70,8 @@ The dashboard query aggregates `AVG(ease_factor)` per topic to surface the 5 top
 
 ```bash
 # Clone and install
-git clone https://github.com/yourusername/prepos
-cd prepos/backend && npm install
+git clone https://github.com/yourusername/O(hire)
+cd O(hire)/backend && npm install
 cd ../frontend && npm install
 
 # Configure environment
