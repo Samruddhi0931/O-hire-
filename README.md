@@ -1,5 +1,7 @@
 # O(hire) — Developer Interview Prep Platform
 
+Live at: https://genuine-energy-production-3399.up.railway.app
+
 A full-stack web application that solves the real problem of fragmented interview preparation. O(hire) combines spaced repetition flashcards, DSA topic tracking, company-wise question filtering, and AI-powered card generation into a single personal prep OS.
 
 ## The Problem
