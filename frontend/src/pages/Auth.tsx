@@ -126,7 +126,7 @@ export default function Auth({ onLogin }: Props) {
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-4 mt-6">
                     {[
-                        { label: "Questions", value: "941+" },
+                        { label: "Questions", value: "2,800+" },
                         { label: "Companies", value: "6" },
                         { label: "Algorithm", value: "SM-2" },
                     ].map((stat) => (
